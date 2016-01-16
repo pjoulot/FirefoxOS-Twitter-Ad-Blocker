@@ -1,0 +1,15 @@
+{
+    "manifest_version": 1,
+    "name": "Twitter Ad-Blocker",
+    "description": "Remove ads on the Twitter apps and the Twitter website.",
+    "version": "1.0",
+    "author": "Philippe Joulot",
+    "content_scripts": [{
+      "matches": ["*://mobile.twitter.com/*", "*://twitter.com/*"],
+      "css": [],
+      "js": ["js/index.js"]
+    }],
+    "icons": {
+      "128": "/icons/128.png"
+    }
+}

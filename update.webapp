@@ -1,0 +1,9 @@
+{
+  "name" : "Twitter Ad-Blocker",
+  "description": "Remove ads on the Twitter apps and the Twitter website.",
+  "developer": { "name": "Philippe Joulot" },
+  "package_path": "extension.zip",
+  "icons": {
+    "128": "/icons/128.png"
+  }
+}
