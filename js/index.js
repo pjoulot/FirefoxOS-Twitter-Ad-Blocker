@@ -16,7 +16,6 @@ function initialize() {
     // Already injected, abort.
     return;
   } else {
-    console.log('injected');
     var timeline = document.querySelector('.timeline');
     timeline.classList.add('twitter-adblock-injected');
     removePromotedTweets();
@@ -32,8 +31,6 @@ function removePromotedTweets() {
   var i;
   for (i = 0; i < elementsToRemove.length; i++) {
     var parentItem = elementsToRemove[i].parentNode;
-    console.log(parentItem);
-    console.log("removed");
     parentItem.removeChild(elementsToRemove[i]);
   } 
 }
