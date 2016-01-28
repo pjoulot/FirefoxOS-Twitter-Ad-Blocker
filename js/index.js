@@ -19,8 +19,9 @@ function initialize() {
     var timeline = document.querySelector('.timeline');
     timeline.classList.add('twitter-adblock-injected');
     removePromotedTweets();
-    var listenMoreTweets = document.querySelector('.timeline .stream-items[type="tweets"]');
-    listenMoreTweets.addEventListener('DOMNodeInserted', function() {
+    //Remove ads when we load more tweets
+    var listenMoreTweets = document.querySelector('#view-tweets');
+    listenMoreTweets.addEventListener('DOMSubtreeModified', function() {
       removePromotedTweets();
     });
   }
