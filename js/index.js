@@ -19,10 +19,14 @@ function initialize() {
     var timeline = document.querySelector('.timeline');
     timeline.classList.add('twitter-adblock-injected');
     removePromotedTweets();
-    //Remove ads when we load more tweets
-    var listenMoreTweets = document.querySelector('#view-tweets');
+    removePromotedTrendBoxItem();
+    // Remove ads when there are changes into the views container
+    // It was before done on the view itself has already a listener
+    //and for some reasons the listener was removed sometimes
+    var listenMoreTweets = document.querySelector('#views');
     listenMoreTweets.addEventListener('DOMSubtreeModified', function() {
       removePromotedTweets();
+      removePromotedTrendBoxItem();
     });
   }
 }
@@ -34,4 +38,14 @@ function removePromotedTweets() {
     var parentItem = elementsToRemove[i].parentNode;
     parentItem.removeChild(elementsToRemove[i]);
   } 
+}
+
+function removePromotedTrendBoxItem() {
+  var elementsToRemove = document.querySelectorAll('#view-discover .trends-box-list-item .promoted-content');
+  var i;
+  for (i = 0; i < elementsToRemove.length; i++) {
+    var item = elementsToRemove[i].parentNode;
+    var parentItem = item.parentNode;
+    parentItem.removeChild(item);
+  }
 }
