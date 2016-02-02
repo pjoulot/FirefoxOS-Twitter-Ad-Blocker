@@ -1,7 +1,7 @@
 {
     "manifest_version": 1,
     "name": "Twitter Ad-Blocker",
-    "description": "Remove ads on the Twitter apps and the Twitter website. If you encounter bugs, report them here: https://github.com/pjoulot/FirefoxOS-Twitter-Ad-Blocker/issues",
+    "description": "Remove ads on the Twitter app and the Twitter website. Report bugs here: github.com/pjoulot/FirefoxOS-Twitter-Ad-Blocker/issues",
     "version": "1.0",
     "author": "Philippe Joulot",
     "content_scripts": [{
