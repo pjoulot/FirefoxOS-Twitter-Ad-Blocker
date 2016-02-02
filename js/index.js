@@ -16,14 +16,14 @@ function initialize() {
     // Already injected, abort.
     return;
   } else {
-    var timeline = document.querySelector('.timeline');
-    timeline.classList.add('twitter-adblock-injected');
+    var listenMoreTweets = document.querySelector('#views');
+    listenMoreTweets.classList.add('twitter-adblock-injected');
     removePromotedTweets();
     removePromotedTrendBoxItem();
     // Remove ads when there are changes into the views container
     // It was before done on the view itself has already a listener
     //and for some reasons the listener was removed sometimes
-    var listenMoreTweets = document.querySelector('#views');
+    
     listenMoreTweets.addEventListener('DOMSubtreeModified', function() {
       removePromotedTweets();
       removePromotedTrendBoxItem();
