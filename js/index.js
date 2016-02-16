@@ -18,21 +18,22 @@ function initialize() {
   } else {
     var listenMoreTweets = document.querySelector('#views');
     listenMoreTweets.classList.add('twitter-adblock-injected');
-    removePromotedTweets();
+    removePromotedTweetsAndAccounts();
     removePromotedTrendBoxItem();
     // Remove ads when there are changes into the views container
     // It was before done on the view itself has already a listener
     //and for some reasons the listener was removed sometimes
     
     listenMoreTweets.addEventListener('DOMSubtreeModified', function() {
-      removePromotedTweets();
+      removePromotedTweetsAndAccounts();
       removePromotedTrendBoxItem();
     });
   }
 }
 
-function removePromotedTweets() {
-  var elementsToRemove = document.querySelectorAll('.timeline .stream-items[type="tweets"] li[label="promoted"]');
+function removePromotedTweetsAndAccounts() {
+  //Use a large selector to remove sponsorised tweets but also Twitter sponsorised accounts
+  var elementsToRemove = document.querySelectorAll('[label="promoted"]');
   var i;
   for (i = 0; i < elementsToRemove.length; i++) {
     var parentItem = elementsToRemove[i].parentNode;
