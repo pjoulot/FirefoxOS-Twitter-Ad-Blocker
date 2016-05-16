@@ -6,6 +6,10 @@ An addon to remove ads on the Twitter apps and the Twitter website for Firefox O
 - Firefox OS 2.5 and more
 - Official Twitter App and website for Firefox OS
 
+##Warning
+
+This addon doesn't work anymore since Twitter changed his website. I need to work on that.
+
 ##Informations
 
 The addon basically juste remove the tweets that have been chosen by Twitter as ads. It lets only tweets from people that you follow in your timeline.
